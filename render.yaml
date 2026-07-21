@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: truthlens-backend
+    env: docker
+    repo: https://github.com/c13829663320-debug/truthlens
+    rootDir: backend
+    plan: free
+    envVars:
+      - key: TELEGRAPH_DAEMON_URL
+        value: http://13.237.89.59:7044/daemon
+      - key: TELEGRAPH_DISPATCHER_URL
+        value: http://13.237.89.59:7044/miner-dispatcher
+      - key: PAYAI_FACILITATOR_URL
+        value: https://facilitator.payai.network
